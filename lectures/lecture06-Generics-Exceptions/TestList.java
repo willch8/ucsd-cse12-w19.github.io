@@ -25,6 +25,9 @@ public class TestList {
   @Test
   public void testListOfLists() {
 
+    //in class
+    List<List<String>> bllist = new AList<List<String>>();
+    
     bllist.add(new AList<String>());
     bllist.add(new AList<String>());
     bllist.get(0).add("a");
