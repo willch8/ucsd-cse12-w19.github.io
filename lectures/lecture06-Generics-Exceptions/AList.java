@@ -24,13 +24,15 @@ public class AList<E> implements List<E> {
   public int size() {
     return this.size;
   }
-
+  
+  //use for generics array initialization
+  @SuppressWarnings("unchecked")
   private void expandCapacity() {
     int currentCapacity = this.elements.length;
     if(this.size < currentCapacity) { return; }
 
-
-
+    //in class
+    E[] expanded = (E[])(new Object[this.size*2]);
 
     for(int i = 0; i < this.size; i += 1) {
       expanded[i] = this.elements[i];
